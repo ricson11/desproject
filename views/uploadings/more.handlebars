@@ -1,0 +1,54 @@
+
+<main class="mainpage">
+<div class="container my-4  border ">
+        <h3 class=" text-center">{{uploading.title}}</h3>
+        
+      <img src="{{uploading.image}}" class="rounded mx-auto d-block my-4" id="images">
+              <a href="/comadd">add comment</a>
+
+</div>
+<a href="/uploadings/comments/{{uploading._id}}">Post comment</a>
+<!--<div class="container my-5 col-md-8 ">
+    <form method="post" action="/uploadings/comment/{{uploading.id}}">
+    <div class="form-group">
+        <label for="comment">Add comment</label>
+        <textarea class="form-control" name="commentBody">
+
+        </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">add comment</button>
+    </form>
+     
+</div>-->
+{{#each comment}}
+<div class="container">
+    <div class="card">
+    {{commentBody}}
+ <p>title{{uploading.title}}</p>
+    </div>
+</div>
+
+{{/each}}
+<div class="container">
+ {{#each uploading.comments}}
+     <div class="one">
+    <p>{{commentBody}}</p>
+        
+  </div>
+    {{else}}
+    <p>no com</p>
+    {{/each}}
+    </div>
+   </main> 
+
+<style>
+#images{
+    text-align: center;
+    height:300px;
+    width:300px
+    
+}
+body{
+    background: ghostwhite;
+}
+</style>

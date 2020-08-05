@@ -1,0 +1,40 @@
+<p>404 page your message wasn't successful send</p>
+
+
+
+
+
+
+
+var perPage=parseInt(req.query.perPage)||5
+    var page = parseInt(req.query.page)||1
+    var start = page-1
+    var end = page+1
+
+     Uploading.find({}).sort({date:-1}).skip((perPage * page)-perPage)
+    .limit(perPage)
+    
+    .exec(function(err, uploadings){
+        Uploading.countDocuments().exec(function(err, count){
+            if(err) return next(err)
+            if(start<uploadings.length){
+                page-1
+            }
+            if(end>1){
+                page+1
+            }
+            
+
+            res.render('banners/place',{
+                current:page,
+                pages: Math.ceil(count/perPage),
+                uploadings:uploadings,
+                start:start,
+                end:end
+              
+            })
+        })
+    })
+    
+})
+

@@ -1,0 +1,32 @@
+
+<div class="container">
+     {{#each blogs}}
+    <div class="card">
+        <img class="card-img-top" src="{{image}}">
+        <div class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+        </div>
+    </div>
+     
+   
+     {{/each}}
+     </div>
+
+     
+             <nav aria-label="uploadings pages">
+                 <ul class="pagination my-4">
+                       {{#if skip}}
+                     <li class="pade-item"><a class="page-link" href="?page={{prev}}&limit">Previous</a></li>
+                        {{/if}}
+                        
+                     <li class="page-item"><a class="page-link" href="?page=1&limit">1</a></li>
+                     <li class="page-item"><a class="page-link" href="?page=2&limit">2</a></li>
+                     <li class="page-item"><a class="page-link" href="?page=2&limit">3</a></li>
+                     <li class="page-item"><a class="page-link" href="?page=4&limit">4</a></li>
+                      {{#if next}}
+                     <li class="page-item"><a class="page-link" href="?page={{next}}&limit">Next</a></li>
+                    {{/if}}
+                 </ul>
+             </nav><br>
+             {{lastPage}}
+             {{blogs.length}}

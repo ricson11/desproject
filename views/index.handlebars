@@ -1,0 +1,551 @@
+
+     <div class="container-fluid d-none d-lg-flex justify-content-between p-3 sticky-top bg-danger" id="navi">
+                 {{#if user}}
+             <h1 class=" text-center  ">Welcome  {{username}}</h1>
+             {{/if}}
+             <ul class="nav justify-content-center  " id="navigate">
+                 <li class="nav-item">
+                <a class="nav-link" href="/contacts/add">Home</a>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="">Contact</a>
+                         </li>
+                         <li class="nav-item">
+                                <a class="nav-link" href="">More</a>
+                                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="">About</a>
+                 </li>
+             </ul>
+             </div>
+
+              <div class="container d-lg-none d-sm-block" id="contents">
+             <div class="remove">x</div>
+             <div class="add">=</div>
+             <navigation class="navigation">
+                 <a href="">one</a>
+                 <a href="">two</a>
+
+             </navigation>
+            </div>
+        
+         <hr>
+             
+             <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3  ">
+                 <a href="" class="navbar-brand font-weight-bold ml-3" >My Brand</a>
+
+                 <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse"
+                 data-target="#myNavbar">
+                 <span class="navbar-toggler-icon "></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="myNavbar">
+                   <ul class="navbar-nav">
+                       <li class="nav-item active">
+                           <a class="nav-link" href="" id="dan">Home</a>
+                       </li>
+                       <li class="nav-item ">
+                           <a class="nav-link" href="" id="dan">About</a>
+                       </li>
+                       <li clas="nav-item">
+                           <a class="nav-link" href="" id="dan">About</a>
+                       </li>
+                   </ul>
+                </div>
+             </nav>
+             <hr>
+             <div class="container-fluid my-4 d-none d-lg-block "id="carousel-content">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" 
+                    class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid w-100 " src="./Images/ad1.jpg" alt="">
+                       <figcaption class="figure-caption bg-success">
+                      <h4 class="text-white p-3 text-center mb-2 ">Welcome to our site</h4>
+ 
+                       </figcaption>
+                       <!-- <div class="carousel-caption">
+                            <h3 class="text-success ">Welcome to our site</h3>
+                        </div>-->
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid rounded w-100" src="./Images/employee3.jpg" alt="">
+                   <div class="carousel-caption">
+                       <h3 class="text-success ">Welcome to our site</h3>
+                   </div>
+                    </div>
+                    <div class="carousel-item">
+                        {{#each features}}
+                        <img class="d-block img-fluid w-100" src="{{image}}" alt="">
+                       <div class="carousel-caption">
+                            <h3 class="text-success ">{{title}}</h3>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators"
+                role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators"
+            role="button" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+            </div>
+        </div>
+             <div class="container col-lg-6 col-xl-12" id="cost">
+                 <form action="/#">
+                <div class="form-group ">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email"
+                    placeholder="enter your email">
+                </div>  
+                <div class="form-group">
+                        <label for="name">name</label>
+                        <input type="text" class="form-control" id="name"
+                        placeholder="enter your name">
+                    </div>  
+                    <div class="form-group form-check ">
+                            <input type="checkbox" class="form-check-input" id="check">
+                            <label for="check" class="form-check-label">check me</label>
+
+                        </div> 
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                           <textarea class="form-control"  id="comment"></textarea>
+                        </div>
+                      
+                       <div class="input-group mb-3">
+                           <input type="search" class="form-control" placeholder="search">
+                           <div class="input-group-append">
+                               <button class="btn btn-secondary" type="submit">Search</button>
+                           </div>
+                       </div>
+                       <div class="custom-file">
+                           <input type="file" class="custom-file-input" id="customFile"multiple>
+                           <label class="custom-file-label" for="customFile">choose file</label>
+                       </div>
+                        <div class="form-group mb-3 " style="width:190px">
+                            <label for="select">Select</label>
+                            <select class="custom-select"  id="select">
+                                <option selected>select</option>
+                                <option>1</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" >
+                        </div>
+                        
+                            
+                        
+                         
+                        <button type="submit" class="btn btn-primary ">submit</button>
+                </form>
+           
+             </div>
+             <div class="alert alert-primary my-4 text-center" role="alert">
+                 <p>destiny will nsurely be in london next bweek</p>
+             </div>
+             <diiv class="container">
+             <div class="alert alert-success text-center" role="alert">successfully registered</div>
+            </diiv>
+            <div class="alert alert-warning alert-dismissable fade show" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <p class="text-center">destiny</p>
+
+
+            </div>
+            <div class="container">
+                <div class="card">
+                <div class="dropdown mt-2" id="drop">
+                    <a href="" class="btn btn-danger dropdown-toggle" id="dropdownMenu"
+                    data-toggle="dropdown" role="button">Dropdown</a>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">HOME</a>
+                        <a href="" class="dropdown-item">others</a>
+                        <a href="" class="dropdown-item">others</a>
+                      
+
+
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-center">welcome boss</h3>
+                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptatem eligendi sequi porro quia pariatur inventore unde ad provid
+                         Quia, nulla! Amet esse blanditiis eligendi hic explicabo error iusto numquam.</p>
+                </div>
+                </div>
+            </div>
+             <hr>
+             <div id="carouselSlide" class="carousel slide" data-ride="carousel">
+                 <div class="carousel-inner">
+                     <h3 class="one">Trending News</h3>
+                     {{#each posts}}
+                     <div class="carousel-item active">
+                         <h5 class="ten">{{title}}</h5>
+                     </div>
+                     {{/each}}
+                     {{#each features}}
+                     <div class="carousel-item">
+                        <h5 class="ten">{{title}}</h5>
+                    </div>
+                    {{/each}}
+                    <div class="carousel-item">
+                        <h5 class="ten">destiny destiny destiny destiny</h5>
+
+                    </div>
+                 </div>
+             </div>
+             <hr>
+             <div class="container my-5 col-lg-9">
+                 <div class="card">
+                     <div class="card-header text-center bg-success text-white">
+                         <p>Posted by destiny</p>
+                     </div>
+                     <img class="card-img-bottom" src="./Images/employee4.jpg" alt="">
+
+                     <div class="card-body bg-light">
+                         <h3 class="card-title" id="meme">Welcome to desto</h3>
+                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda possimus deleniti veritatis, perferendis reiciendis sed voluptatibus delectus 
+                         doloribus aliquam modi adipisci? Ab hic tempore nobis dolorum fuga dolor. Vel.</p>
+                      <a href="" class="btn btn-primary">Readmore</a>
+                    </div>
+                 </div>
+             </div>
+         
+
+         <div class="container pt-4 col-lg-12" id="ten">
+         <div class="card " id="cardo">
+             <img class="card-img-top" src="Images/ad1.jpg"  >
+             <div class="card-body">
+                 <h3 class="card-title text-center">Breaking News</h3>
+                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                      modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+             </div>
+         </div>
+        </div>
+        <div class="container">
+        <div class="row my-4">
+            <div class="col-md-7 ">
+                    <div class="card " >
+                            <img class="card-img-top" src="Images/ad1.jpg"  >
+                            <div class="card-body">
+                                <h3 class="card-title">Breaking News</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                                     modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+                            </div>
+                        </div>
+                
+            </div>
+            <div class="col-md-5">
+                    <div class="card bg-light shadow-sm "  >
+                            <img class="card-img-top" src="Images/ad1.jpg"  >
+                            <div class="card-body">
+                                <h3 class="card-title">Breaking News</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                                     modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="card-group">
+
+            <div class="card bg-light shadow-sm mr-3"  >
+                    <img class="card-img-top " src="Images/ad1.jpg"  >
+                    <div class="card-body">
+                        <h3 class="card-title">Breaking News</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                             modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+                    </div>
+                </div>
+                <div class="card bg-light shadow-sm mr-3"  >
+                        <img class="card-img-top" src="Images/ad1.jpg"  >
+                        <div class="card-body">
+                            <h3 class="card-title">Breaking News</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                                 modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-light shadow-sm "  >
+                            <img class="card-img-top" src="Images/ad1.jpg"  >
+                            <div class="card-body">
+                                <h3 class="card-title">Breaking News</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium asperiores voluptatum consequatur ad iusto iste molestias rem, error rerum aperiam neque,
+                                     modi tempora aspernatur! Sequi exercitationem voluptatibus veniam quod non.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="container  my-4">
+                            <h3 class="card-title text-center">Destiny and alll</h3>
+                            <p class="card-text ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti rerum alias laborum saepe, delectus natus enim sapiente adipisci autem, nesciunt quis
+                            , ipsa reiciendis blanditiis porro? Eius deleniti minus laudantium ut.</p>
+                            <img class="imgs" src="./Images/staff7.jpg " style="width:100%;" class="rounded">
+                    </div>
+                    <hr>
+    <a href="#collapseCon" class="btn btn-primary my-4" data-toggle="collapse">More here</a>
+      <div class="collapse" id="collapseCon">
+          <div class="card card-body col-lg-6">
+              <p>lorem and i was to</p>
+          </div>
+      </div> 
+      <div class="container">   
+         <div class="dropdown" >
+             <a href="" class="btn btn-primary dropdown-toggle" id="dropdownMenu"
+             data-toggle="dropdown" role="button">Dropdown</a>
+             <div class="dropdown-menu ">
+                 <a href="" class="dropdown-item">home</a>
+                 <a href="" class="dropdown-item">about</a>
+
+             </div>
+         </div>   
+        </div> 
+        
+      
+       </div>
+       <div class="container my-4">
+           <div class="card bg-primary"> 
+               <div class="card-header bg-secondary text-center">
+                   <p class="text-white">welcome to our site</p>
+               </div>
+       {{#each uploadings}}
+       <div class="card bg-light mb-3" >
+           <div class="card-header">
+              <p>latest posts</p>
+           </div>
+           <img class="card-img-top" src="{{image}}">
+       <div class="card-body">
+           <h3 class="card-title"><a href="/uploadings/{{id}}">{{title}}</a> </h3>
+           <button class="btn btn-primary text-dark" id="links"><a href="/uploadings/{{id}}">readmore</a></button>
+       </div>
+         </div>
+
+       {{else}}
+       <p>no</p>
+       {{/each}}
+       </div> 
+       </div> 
+       {{uploadings.length}}
+       <div class="container">
+          
+           <div class="card-group my-4">
+                 {{#each features}}
+               <div class="card bg-light">
+                   <div class="card-header">
+                       <p>lates on edu</p>
+                   </div>
+                  <img clas="card-img-top" src="{{image}}" id="myimg">
+                    <div class="card-body">
+                        <h3 class="card-title">{{title}}</h3>
+                    </div>
+               </div>
+                 {{/each}}
+
+                  {{#each posts}}
+
+               <div class="card ml-3 bg-light">
+                   <div class="card-header">
+                       <p>lates on edu</p>
+                   </div>
+                 <img clas="card-img-top" src="{{image}}" id="myimg">
+
+               <div class="card-body ">
+                   <h3 class="card-title">{{title}}</h3>
+               </div>
+           </div>
+             </div>
+
+          {{/each}}
+          <div class="conntainer">
+             {{#each features}}
+              <div class="card bg-light">
+              <img src="{{image}}" class="img-thumbnail" id="men">
+
+                  <div class="card-body">
+                      <h3 class="card-title">{{title}}</h3>
+                
+
+                  </div>
+              </div>
+              {{/each}}
+              </div>
+              <div class="jumbotron my-4" id="jump">
+                  <p>your advert here</p>
+              </div>
+            <div class="container my-4">
+                  <form action="/contacts" method="post">
+                  <h3 class="text-center">Contact Us</h3>
+                   <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" name="name" class="form-control">
+                  </div>
+                  
+                <div class="form-group">
+                      <label for="email">your email address</label>
+                      <input id="mail" name="email" class="form-control">
+                  </div>
+                   
+                      <div class="form-group">
+                      <label for="message">your message</label>
+                      <textarea name="message" class="form-control"></textarea>
+                  </div>
+                  <button type="submit" class="btn bg-primary text-white">Send message</button>
+                  </form>
+              </div>
+               <nav class="navbar navbar-expand-lg bg-success navbar-dark p-3  ">
+                 <a href="" class="navbar-brand font-weight-bold ml-3" >My Brand</a>
+
+                 <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse"
+                 data-target="#myNavbar">
+                 <span class="navbar-toggler-icon "></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-lg-flex justify-content-around" id="myNavbar">
+                   <ul class="navbar-nav">
+                       <li class="nav-item active">
+                           <a class="nav-link font-weight-bold" href="" id="eye">Home</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link font-weight-bold" href="" id="eye">About</a>
+                       </li>
+                       <li clas="nav-item">
+                           <a class="nav-link font-weight-bold" href="" id="eye">Mission</a>
+                       </li>
+                   </ul>
+                     <form class="form-inline my-2 my-lg-0">
+                         <input class="form-control mr-sm-2" type="search" placeholder="search this site"
+                         aria-label="search">
+                         <button class="btn btn-outline-success bg-white my-2 my-sm-0 text-dark" type="submit">Search</button>
+                         
+                     </form>
+                </div>
+             </nav>
+             
+            
+             <nav aria-label="uploadings pages">
+                 <ul class="pagination my-4">
+                     <li class="pade-item"><a class="page-link" href="/uploadings/?page=page-1">Previous</a></li>
+                     <li class="page-item"><a class="page-link" href="/uploadings/?page=2&limit=25">1</a></li>
+                     <li class="page-item"><a class="page-link" href="">2</a></li>
+                     <li class="page-item"><a class="page-link" href="">3</a></li>
+                     <li class="page-item"><a class="page-link" href="">4</a></li>
+                     <li class="page-item"><a class="page-link" href="/uploadings/?page=next">Next</a></li>
+
+                 </ul>
+             </nav><br>
+             {{#each uploadings}}
+             <div class="container col-10 ">
+                 <div class="media border p-3">
+               <a href="{{url}}" target="_blank"><img src="{{image}}"width="200px" id="medias"></a>
+              <div class="media-body ml-3 ">
+                 <p>Posted: <span class="badge badge-pill badge-primary">5 mins ago</span></p>
+
+                  <h5>{{title}}</h5>
+                  <p>lorem the boss is at it again but this time around</p>
+                  <a href="">Readmore</a>
+                 <!-- <a href=""class="badge badge-primary">readmore</a>
+                  <a href="" class="btn btn-primary">readmore</a>-->
+
+              </div>
+            </div>
+             </div>
+             {{/each}}<br>
+
+             <div class="row">
+
+                 <div class="col-lg-8">
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat deserunt sequi ratione neque modi ab atque sint reiciendis! Impedit accusamu
+                        antium blanditiis officia debitis tenetur aut sit nemo exercitationem deleniti.</p>
+                                       {{#each uploadings}}
+
+                      <div class="media border p-3">
+                          <img class="img" src="{{image}}" width="200px" id="medias">
+                          <div class="media-body ml-3">
+                              <h5 class="title">{{title}}</h5>
+                          </div>
+                       
+
+                      </div>
+                        {{/each}}
+                 </div>
+
+
+                 <div class="col-lg-4 mt-4">
+                     <p class="text-center">recent</p>
+                                       {{#each uploadings}}
+
+                      <div class="card">
+                          <img class="card-img-top" src="{{image}}">
+                          <div class="card-body">
+                              <h5 class="card-title">{{title}}</h5>
+                          </div>
+                      </div>
+                         {{/each}}
+
+                 </div>
+             </div><br>
+             <div class="container my-4">
+                 <div class="card bg-info">
+                     <div class="card-header bg-light">
+              <p class="text-center text-secondary">Latest informations</p>
+                     </div>
+                      {{#each uploadings}}
+             <div class="container col-10 ">.
+                 <div class="media border p-3 bg-light">
+               <a href="uploadings/{{_id}}" target="_blank"><img src="{{image}}"width="200px" id="medias"></a>
+              <div class="media-body ml-3 ">
+                 <p>Posted: <span class="badge badge-pill badge-primary">5 mins ago</span></p>
+
+                  <h5>{{title}}</h5>
+                  <p>lorem the boss is at it again but this time around</p>
+                  <a href="/uploadings/{{_id}}">Readmore</a>
+                 <!-- <a href=""class="badge badge-primary">readmore</a>
+                  <a href="" class="btn btn-primary">readmore</a>-->
+
+              </div>
+            </div>
+             </div>
+             {{/each}}<br>
+             <div class="card-footer">
+
+             </div>
+                 </div>
+             </div><br>
+             <div class="container">
+             {{#each banners}}
+             <a href="{{urlBan}}">{{photo}}</a>
+
+             {{/each}}
+                </div><br> 
+                <div clas="container">
+                    <figure class="figure">
+                    <img src="./Images/ad1.jpg" class="img-responsive" width="200px">
+                    <figcaption class="figure-caption ">
+                        <p class="bg-danger p-3 text-center">one of us</p>
+                    </figcaption>
+                    </figure>
+                </div><br>
+                
+ <div class="jumbotron mb-0 ">
+            <h2 class="text-primary">Our Visions</h2>
+            <p>For you to know about all this learn now.</p>
+          </div>
+       <div class=" card card-footer bg-primary p-5">
+           <small class="text-muted">OKay</small>
+
+       </div>
+
+     <!--<script src="./js/bootstrap.bundle.min.js"></script>  
+     
+      <script src="./js/bootstrap.min.js"></script>   --> 
+     
+     

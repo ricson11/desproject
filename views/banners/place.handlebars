@@ -1,0 +1,80 @@
+<div class="container">
+     {{#each features}}
+    <div class="card">
+        <img class="card-img-top" src="{{image}}">
+        <div class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+        </div>
+    </div>
+         <a href="/uploadings/{{id}}">readmore</a>
+          <a href="/comadd">add comment</a>
+   
+     {{/each}}
+         <nav aria-label="uploadings pages">
+         <ul class="pagination my-4">
+             {{#if start}}    
+     <li class="pade-item"><a class="page-link" href="?page={{start}}&limit">Previous</a></li>
+     {{/if}}
+       {{#if page}}
+    <li class="page-item" id="one"><a class="page-link text-dark" href="?page=1">1</a></li>
+      {{else}}
+          <li class="page-item" id="one"><a class="page-link " href="?page=1">1</a></li>
+           {{/if}}
+       {{#if page}}
+
+     <li class="page-item" id="two"><a class="page-link" href="?page=2">2</a></li>
+      {{/if}}
+     {{#if page}}
+
+    <li class="page-item" id="three"><a class="page-link" href="?page=3">3</a></li>
+                {{/if}}
+   
+          {{#if page}}
+
+ <li class="page-item" id="four"><a class="page-link" href="?page=4">4</a></li>
+         {{/if}}
+ {{#if page}}
+
+<li class="page-item " id="five"><a class="page-link " href="?page=5">5</a></li>
+  
+     {{/if}}
+
+{{#if end}}
+<li class="page-item " id="one"><a class="page-link" href="?page={{end}}"> Next</a></li>
+{{/if}}
+<li class="page-item disabled" id="five"><a class="page-link" href="">Page: {{page}} of {{pages}}</a></li>
+
+
+    </ul>
+</nav>
+ {{page}}{{pages}}
+ 
+ {{count}}
+ 
+</div>
+
+  
+
+
+<div class="container">
+     {{#each posts}}
+    <div class="card">
+        <img class="card-img-top" src="{{image}}">
+        <div class="card-body">
+            <h3 class="card-title">{{title}}</h3>
+        </div>
+    </div>
+     
+   
+     {{/each}}<br>
+     <div class="container">
+     {{#each contacts}}
+    <div class="card">
+        
+        <div class="card-body">
+            <h3 class="card-title">{{name}} {{username}} {{email}}</h3>
+        </div>
+    </div>
+     
+   
+     {{/each}}

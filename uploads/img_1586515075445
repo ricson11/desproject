@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bless</title>
+    <link rel ="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="header-page">
+    <div class="navigation">
+        <a href="">Add Post</a>
+         <a href="">ABout</a>
+         <a href="">Contact</a>
+       <a href="">More</a>
+
+
+    </div>
+</div>
+
+
+<section class="main-page">
+    <div class="box">
+        <h3>Welcome to bless page!</h3>
+    </div>
+    <div class="content-page">
+        <div class="main">
+            <p>Latest</p>
+            <div class="post-page">
+                <p>No recent post</p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <p>Others</p>
+        </div>
+    </div>
+</section>
+
+<section class="footer-page">
+    <div id="foot1">
+        <p>More</p>
+    </div>
+    <div id="foot2">
+        <p>more</p>
+        <form>
+            <input type="text" class="ten">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="foot3">
+        <p>more</p>
+    </div>
+</section>
+</body>
+</html>
