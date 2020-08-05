@@ -153,7 +153,7 @@ router.get('/banners',async(req, res)=>{
 
 
     res.render('banners/home',{banners})
-})
+});
 
 
 
